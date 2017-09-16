@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Products CRUD</title>
+</head>
+<body>
+
+	<div id="productsBox">
+		<div id="productA">A</div>
+		<div id="productB">B</div>
+
+		<div>
+			<button id="addBtn">Add new product</button>
+		</div>
+	</div>
+
+	<script>
+		var addBtn = document.getElementById("addBtn");
+
+		addBtn.addEventListener("click", function(){
+			// console.log("Add button clicked");
+
+			var newProduct = document.createElement("div");
+			var productName = document.createTextNode("C");
+
+			newProduct.appendChild(productName);
+			newProduct.id = "productC";
+
+			newProduct.className += "product";
+
+			var productsBox = document.querySelector("#productsBox");
+			productsBox.appendChild(newProduct);
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+

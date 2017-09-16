@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+</head>
+<body>
+
+
+	<script>
+		console.log("Arrays");
+		// Create an array with the letters A, B and C
+
+		var letters = ["A", "B", "C"];
+		console.dir(letters);
+
+		// console.log(letters[1]);
+
+		// add letter "D" to the array
+		letters.push("D");
+		console.log(letters);
+
+		// remove the last element in the array
+		letters.pop();
+		console.log(letters); // should be ["A", "B", "C"] again
+
+		var numbers = ["2", "3"];
+		console.log(numbers);
+
+		// add number "1" at the beginning of the array
+		numbers.unshift("1");
+		console.log(numbers);
+
+		// remove the first element in the array
+		numbers.shift();
+		console.log(numbers);
+
+
+
+
+		var colors = ["red", "blue", "yellow", "orange", "green"];
+		console.log(colors);
+
+		var index = 2;
+		var noOfElems = 3;
+
+		// remove element at the index position in the array
+		// second argument represents the number of elements in the array that should be removed from that position onwards
+		colors.splice(index, noOfElems); 
+		console.log(colors);
+
+
+	</script>
+</body>
+</html>
+
+
+

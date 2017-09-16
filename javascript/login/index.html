@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+   
+        <input id="inputEmail" type="email" placeholder="Insert email">
+        <input id="inputPassword" type="password" placeholder="Insert password">
+        <button id="login">Log in</button>
+        
+        <!-- jQuery library -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+        <script>  
+            // email
+            // password
+            
+            var email =  "user@email.com";
+            var password = "Secret";
+            
+            // var inputEmail = "user@email.com";
+            // var inputPassword = "Secret";
+            
+            
+            // var inputEmail = document.getElementById("inputEmail").value;
+            // var inputPassword = document.getElementById("inputPassword").value;
+
+            
+            // get login button with the use of the jQuery notation "$"
+            var loginButton = $("#login");
+            // console.log(loginButton);
+            
+            // jQuery way:
+            loginButton.click(checkCredentials);
+
+            // Vanilla Javascript way:
+            // loginButton.addEventListener("click", checkCredentials);
+            
+            function checkCredentials(){
+                var inputEmail = document.querySelector("#inputEmail").value;
+                var inputPassword = document.querySelector("#inputPassword").value;
+                
+                
+                // console.log("button is clicked");
+                console.log(inputEmail);
+                console.log(inputPassword);
+                
+                // check login credentials
+                if(inputEmail == email && inputPassword == password){
+                    console.log("Logged in sucessfully");
+                } else {
+                    if (inputEmail != email)
+                        console.log("Login failed, no such user")
+                    else
+                        console.log("Login failed, wrong password")
+                }
+            }
+            
+        
+        </script>
+    </body>
+</html>

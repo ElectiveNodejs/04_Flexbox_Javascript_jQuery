@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Hanoi Towers</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<style>
+		*{
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		
+		body{
+			margin:0px;
+			font-family: 'Lato', sans-serif;
+			color: #000;
+		}
+
+		.big-flex-container{
+			display: flex;
+	    	flex-direction: row;
+		}
+
+		.flex-container-1, .flex-container-2, .flex-container-3 {
+    		background-color: #bbb;
+    		min-height: 100vh;
+    		width:33.33%;
+
+	    	display: flex;
+	    	flex-direction: column; 
+	    	justify-content: flex-end;
+	    	align-items: center; 
+		}
+		        
+		 
+		.flex-item {
+    		padding: 1.5em 1em;
+    		text-align: center;
+    		height: 50px;
+		}
+		        
+		.flex-item-1 { background-color: #21545e; font-size: 1em; }
+		.flex-item-2 { background-color: #41545e; font-size: 1.25em; }
+		.flex-item-3 { background-color: #61545e; font-size: 1.5em; }
+		.flex-item-4 { background-color: #81545e; font-size: 1.75em; }
+		.flex-item-5 { background-color: #a1545e; font-size: 2em; }
+		.flex-item-6 { background-color: #1f5201; font-size: 3em; }
+		.flex-item-7 { background-color: #4d540a; font-size: 2.75em; }
+		.flex-item-8 { background-color: #7b5603; font-size: 2.5em; }
+		.flex-item-9 { background-color: #a95807; font-size: 2.25em; }
+		.empty-peg{font-size:8em;}
+
+	</style>
+</head>
+
+<body>
+	<div class="big-flex-container">
+		<div class="flex-container-1">
+			<div class="flex-item flex-item-1">1</div>
+			<div class="flex-item flex-item-2">2</div>
+			<div class="flex-item flex-item-3">3</div>
+			<div class="flex-item flex-item-4">4</div>
+			<div class="flex-item flex-item-5">5</div>
+		</div>
+		<div class="flex-container-2">
+			<div class="flex-item flex-item-6">6</div>
+			<div class="flex-item flex-item-7">7</div>
+			<div class="flex-item flex-item-8">8</div>
+			<div class="flex-item flex-item-9">9</div>
+		</div>
+		<div class="flex-container-3">
+			<div class="empty-peg">_</div>
+		</div>
+	</div>
+</body>
+
+</html>
