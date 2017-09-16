@@ -1,0 +1,236 @@
+*{
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* general rules for all containers */
+
+h1{
+	text-align: center;
+	margin: 15px 0;
+}
+
+hr{
+	margin-bottom: 100vh;
+}
+
+.container{
+	min-height: 60vh;
+	display: flex; /* or: inline-flex */
+}
+
+.container div{
+	border: 1px black solid;
+	padding: 10px;
+}
+
+
+
+
+/* container 1 */
+
+#container1{
+	background: #1abc9c;
+
+	/* default - flex-direction: row; */
+	flex-direction: column-reverse; /* or: row, row-reverse, column, column-reverse */
+}
+
+
+
+
+/* container 2 */
+
+#container2{
+	background: #27ae60;
+	/* default - flex-wrap: nowrap; */
+	/* flex-wrap: wrap; */ /* or: wrap-reverse, nowrap */
+	flex-flow: row wrap; /* shorthand notation for flex-direction and flex-wrap */
+}
+
+#container2 div{
+	width: 300px;
+}
+
+
+
+
+/* container 3 */
+
+#container3{
+	background: #2980b9;
+}
+
+#container3 div{
+	width: 200px;
+	height: 200px;
+}
+
+/* default order for the flex items: 0 */
+
+#container3 div:nth-child(1){
+	background: pink; 
+	order: 5;
+}
+
+#container3 div:nth-child(2){
+	background: blue; 
+	order: 1;
+}
+
+#container3 div:nth-child(3){
+	background: yellow; 
+	order: 4;
+}
+
+#container3 div:nth-child(4){
+	background: white;
+	order: 2;
+}
+
+#container3 div:nth-child(5){
+	background: orange;
+	order: 3;
+}
+
+
+
+
+/* container 4 */
+
+#container4{
+	background: #9b59b6;
+	/*flex-direction: column;*/
+	justify-content: space-between; /* or: center, flex-start, flex-end, space-between, space-around */
+	/*flex-wrap: wrap;*/
+}
+
+#container4 div{
+	background: yellow;
+	width: 200px;
+	/*width: 500px;*/
+}
+
+
+
+
+
+
+/* container 5 */
+
+#container5{
+	background: #34495e;
+	/*flex-direction: column;*/
+	flex-direction: row;
+	justify-content: center;
+
+	/* default - align-items: stretch; */
+	/*align-items: center;*/
+	align-items: baseline; /* or: stretch, center, flex-start, flex-end, baseline */
+}
+
+#container5 div{
+	background: pink;
+	width: 500px;
+}
+
+#container5 div:nth-child(2){
+	font-size: 30px;
+}
+
+#container5 div:nth-child(5){
+	font-size: 60px;
+}
+
+
+
+
+
+
+/* container 6 */
+
+#container6{
+	background: #f1c40f;
+	flex-wrap: wrap;
+	/*align-items: center;*/
+
+	/* align-content has to be used when we have more than one column/row in the flex container */
+	align-content: center;
+}
+
+#container6 div{
+	background: purple;
+	width: 33.33%;
+	/*height: 100px;*/
+}
+
+
+
+
+
+/* container 7 */
+
+#container7{
+	background: #e74c3c;
+}
+
+#container7 div{
+	background: Turquoise;
+	width: 20%;
+	height: 100px;
+}
+
+#container7 div:nth-child(3){
+	/* default - align-self: stretch; */
+	align-self: center;
+}
+
+#container7 div:nth-child(5){
+	align-self: flex-end;
+}
+
+
+
+
+/* container 8 */
+
+#container8{
+	background: #95a5a6;
+	
+	/*flex-direction: column;*/
+
+	/* needs a hard height */
+	/* height: 400px; */
+}
+
+#container8 div{
+	/* flex-basis is either the width, or the height of the element, depending on the flex-direction */
+	/* for flex-direction: row, it is the width */
+	/* for flex-direction: column, it is the height */
+
+	/* flex-basis: 20%; */
+	flex-basis: 10%;
+	flex-grow: 1;
+}
+
+#container8 div:nth-child(2){
+	/* flex-grow tells the container how many times bigger should the extra space assigned to the item be, relatively to the rest items' extra space, when there is space left inside the container */
+	flex-grow: 4;
+}
+
+#container8 div:nth-child(4){
+	/* flex-shrink tells the container how many times smaller should the space cut from the item be, relatively to the rest items' space, when there isn't enough space left inside the container */
+	flex-shrink: 3;
+	/* basis needs to be changed to something bigger */
+}
+
+
+
+
+
+
+
+
+
