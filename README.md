@@ -8,3 +8,6 @@ For interactive games using Flebox, check the [Flexbox Froggy game](http://flexb
 
 
 See the Login DOM manipulation cast on Scrimba [here](https://scrimba.com/casts/cPJ9QfE)
+
+
+Read more about the DOM [here](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
